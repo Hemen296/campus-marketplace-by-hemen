@@ -1,0 +1,7 @@
+{
+  "name": "Campus Cart",
+  "description": "Campus marketplace for college students to buy and sell used textbooks, cycles, and electronics with VIT student authentication.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
+

@@ -1,0 +1,82 @@
+@import "tailwindcss";
+
+:root {
+  --paper-white: #FAFBFC;
+  --grid-blue: #C9E2F5;
+  --ink-navy: #1B3A5C;
+  --notebook-red: #E63946;
+  --sticky-yellow: #FFD93D;
+  --font-sans: "Helvetica Neue", Helvetica, Arial, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-handwriting: 'Patrick Hand', cursive;
+  --font-marker: 'Kalam', cursive;
+}
+
+html {
+  scroll-behavior: smooth;
+  height: 100%;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--paper-white);
+  color: var(--ink-navy);
+  min-height: 100%;
+  /* Crisp notebook graph-paper pattern from Professional Polish theme */
+  background-image: 
+    linear-gradient(#C9E2F5 1px, transparent 1px),
+    linear-gradient(90deg, #C9E2F5 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+/* Notebook Font Helpers */
+.font-handwriting {
+  font-family: 'Patrick Hand', cursive;
+}
+
+.font-marker {
+  font-family: 'Kalam', cursive;
+}
+
+/* Sticky Note Style */
+.sticky-note {
+  background-color: #FFD93D;
+  border-left: 4px solid #EAB308;
+  box-shadow: 0 4px 6px -1px rgba(27, 58, 92, 0.1), 0 2px 4px -2px rgba(27, 58, 92, 0.1);
+}
+
+/* Notebook Marker Highlight / Underline */
+.marker-highlight {
+  position: relative;
+  display: inline-block;
+}
+
+.marker-highlight::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 8px;
+  background-color: var(--notebook-red);
+  opacity: 0.3;
+  transform: skewX(-12deg);
+  z-index: -1;
+}
+
+/* Washi tape visual effect */
+.washi-tape {
+  position: absolute;
+  top: -8px;
+  left: 50%;
+  transform: translateX(-50%) rotate(-1deg);
+  width: 80px;
+  height: 18px;
+  background: rgba(255, 217, 61, 0.65);
+  box-shadow: 0 1px 3px rgba(27, 58, 92, 0.08);
+  border-left: 2px dashed rgba(27, 58, 92, 0.2);
+  border-right: 2px dashed rgba(27, 58, 92, 0.2);
+  pointer-events: none;
+  z-index: 10;
+}
+
+
